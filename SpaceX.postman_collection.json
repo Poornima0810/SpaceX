@@ -1,0 +1,70 @@
+{
+	"info": {
+		"_postman_id": "dfaf31ec-2061-40e1-b2bb-fbcf244b975d",
+		"name": "SpaceX",
+		"description": "Validating the below scenarios:\r\n1) Verifying only the base url and response[With no parameters]\r\n2) Verifying the GET api with only one parameter",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://api.spacexdata.com/v4",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://api.spacexdata.com/v4",
+				"description": "Base url validation with no parameters"
+			},
+			"response": []
+		},
+		{
+			"name": "https://api.spacexdata.com/v4/launches",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://api.spacexdata.com/v4/launches",
+				"description": "Verify the spacex get api with only one paramter - Get All launches"
+			},
+			"response": []
+		},
+		{
+			"name": "https://api.spacexdata.com/v4/launches",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": "https://api.spacexdata.com/v4/launches/latest",
+				"description": "Invalid method validation"
+			},
+			"response": []
+		},
+		{
+			"name": "https://api.spacexdata.com/v5/launches/latest",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://api.spacexdata.com/v5/launches/latest",
+				"description": "Verifying the GET api by providing incorrect version number V5 in the URI"
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
